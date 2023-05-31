@@ -33,6 +33,7 @@ function ScrollTop() {
           height: { xs: 20, md: 40 },
           borderRadius: "50%",
           border: 2,
+          zIndex: 10,
         }}
         onClick={scrollToTop}
       >
