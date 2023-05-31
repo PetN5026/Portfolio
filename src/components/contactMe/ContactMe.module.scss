@@ -1,0 +1,15 @@
+@import "../../variables.modules";
+
+.dark {
+  // background-color: aqua;
+  color: aqua;
+}
+
+.light {
+  color: $green;
+}
+
+.contactDark {
+  color: white !important;
+  border-color: white !important;
+}

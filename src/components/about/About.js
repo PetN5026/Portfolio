@@ -4,23 +4,23 @@ import Terminal from "./Terminal";
 import { Box } from "@mui/material";
 import { info } from "../../info/Info";
 
-export default function About() {
+export default function About({ darkMode }) {
   const firstName = info.firstName.toLowerCase();
-
+  console.log(Style);
   function aboutMeText() {
     return (
       <>
-        <p>
+        {/* <p>
           <span style={{ color: info.baseColor }}>
             {firstName}
             {info.lastName.toLowerCase()} $
           </span>{" "}
           cat about{firstName}{" "}
-        </p>
+        </p> */}
         <p>
-          <span style={{ color: info.baseColor }}>
+          {/* <span style={{ color: info.baseColor }}>
             about{firstName} <span className={Style.green}>(main)</span> ${" "}
-          </span>
+          </span> */}
           {info.bio}
         </p>
       </>
@@ -90,15 +90,17 @@ export default function About() {
   }
 
   return (
-    <Box
-      display={"flex"}
-      flexDirection={"column"}
-      alignItems={"center"}
-      mt={"3rem"}
-    >
-      <Terminal text={aboutMeText()} />
-      <Terminal text={skillsText()} />
-      <Terminal text={miscText()} />
-    </Box>
+    <section id="about">
+      <Box
+        display={"flex"}
+        flexDirection={"column"}
+        alignItems={"center"}
+        mt={"3rem"}
+      >
+        <Terminal text={aboutMeText()} darkMode={darkMode} />
+        {/* <Terminal text={skillsText()} />
+        <Terminal text={miscText()} /> */}
+      </Box>
+    </section>
   );
 }
