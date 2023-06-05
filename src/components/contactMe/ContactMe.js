@@ -22,6 +22,7 @@ const ContactMe = ({ darkMode }) => {
   return (
     <Box
       width={{ xs: "100%", md: "100%" }}
+      py={"1rem"}
       sx={
         darkMode
           ? {
