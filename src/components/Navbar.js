@@ -35,7 +35,7 @@ const links = [
 ];
 
 export default function Navbar({ darkMode, handleClick }) {
-  console.log(Style);
+  // console.log(Style);
   //   const location = useLocation();
   //   const [active, setActive] = useState(
   //     location.pathname === "/"
@@ -69,8 +69,10 @@ export default function Navbar({ darkMode, handleClick }) {
               }}
             >
               {" "}
-              {!link.type && <p style={{ padding: "0.5rem 0" }}>{link.name}</p>}
-              {link.type && <h1>{link.name}</h1>}
+              {!link.type && (
+                <span style={{ padding: "0.5rem 0" }}>{link.name}</span>
+              )}
+              {link.type && <span>{link.name}</span>}
             </p>
 
             {/* <p

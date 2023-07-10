@@ -14,7 +14,7 @@ const iconClass = "fa fa-circle";
 
 function Terminal(props) {
   const { text, darkMode } = props;
-  console.log(Style);
+  // console.log(Style);
   return (
     <Box
       component={"section"}

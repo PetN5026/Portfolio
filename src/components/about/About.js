@@ -6,7 +6,7 @@ import { info } from "../../info/Info";
 
 export default function About({ darkMode }) {
   const firstName = info.firstName.toLowerCase();
-  console.log(Style);
+  // console.log(Style);
   function aboutMeText() {
     return (
       <>
@@ -21,7 +21,13 @@ export default function About({ darkMode }) {
           {/* <span style={{ color: info.baseColor }}>
             about{firstName} <span className={Style.green}>(main)</span> ${" "}
           </span> */}
-          {info.bio}
+          <span>{info.bio}</span>
+          <br />
+          <br />
+          <span>{info.bio2}</span>
+          <br />
+          <br />
+          <span>{info.bio3}</span>
         </p>
       </>
     );

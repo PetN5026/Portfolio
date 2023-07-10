@@ -4,20 +4,28 @@ import Button from "@mui/material/Button";
 import { Box, Stack } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import Style from "./ContactMe.module.scss";
+import emailjs from "@emailjs/browser";
 const ContactMe = ({ darkMode }) => {
-  console.log("dark", darkMode);
+  // console.log("dark", darkMode);
   const [email, setEmail] = useState("");
   const [first, setFirst] = useState("");
   const [last, setLast] = useState("");
   const [body, setBody] = useState("");
-
   function submitHandler(e) {
     e.preventDefault();
 
-    console.log("email,", email);
-    console.log("first,", first);
-    console.log("last,", last);
-    console.log("body", body);
+    const mail = {
+      first,
+      last,
+      email,
+      body,
+    };
+    emailjs.send(
+      process.env.REACT_APP_SERVICE_ID,
+      process.env.REACT_APP_TEMPLATE_ID,
+      mail,
+      process.env.REACT_APP_PUBLIC_KEY
+    );
   }
   return (
     <section id="contactMe">
